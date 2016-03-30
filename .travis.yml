@@ -11,4 +11,4 @@ script:
   - mvn package
 
 after_script:
-  - hiptest-publisher -c java-testng.conf -p target/surefire-reports/TEST-com.testng.coffeemachine.ProjectTest.xml --test-run-id=1359
+  - hiptest-publisher -c java-testng.conf -p "target/surefire-reports/junitreports/TEST-com.testng.coffeemachine.*.xml" --test-run-id=1359
