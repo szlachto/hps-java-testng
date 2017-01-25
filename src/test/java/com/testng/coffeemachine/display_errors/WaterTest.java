@@ -1,4 +1,4 @@
-package com.testng.coffeemachine.error_messages;
+package com.testng.coffeemachine.display_errors;
 
 import org.testng.annotations.*;
 import com.testng.coffeemachine.Actionwords;

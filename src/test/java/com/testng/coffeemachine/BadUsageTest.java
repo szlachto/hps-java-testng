@@ -2,7 +2,7 @@ package com.testng.coffeemachine;
 
 import org.testng.annotations.*;
 
-public class WeirdSpecsTest {
+public class BadUsageTest {
 
     public Actionwords actionwords;
 
