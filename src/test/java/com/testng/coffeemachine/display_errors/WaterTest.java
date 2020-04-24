@@ -16,18 +16,22 @@ public class WaterTest {
         // And I handle everything except the water tank
         actionwords.iHandleEverythingExceptTheWaterTank();
     }
-
+    //
+    // Tags: priority:high
     @Test
-    public void messageFillWaterTankIsDisplayedAfter50CoffeesAreTaken() {
-        // When I take "50" coffees
-        actionwords.iTakeCoffeeNumberCoffees(50);
-        // Then message "Fill tank" should be displayed
-        actionwords.messageMessageShouldBeDisplayed("Fill tank");
+    public void whenTheWaterTankIsFilledTheMessageDisappears() {
+        // When I take "55" coffees
+        actionwords.iTakeCoffeeNumberCoffees(55);
+        // And I fill the water tank
+        actionwords.iFillTheWaterTank();
+        // Then message "Ready" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Ready");
     }
-
+    //
+    // Tags: priority:low
     @Test
     public void itIsPossibleToTake10CoffeesAfterTheMessageFillWaterTankIsDisplayed() {
-        // Given I take "60" coffees
+        // When I take "60" coffees
         actionwords.iTakeCoffeeNumberCoffees(60);
         // Then coffee should be served
         actionwords.coffeeShouldBeServed();
@@ -36,14 +40,13 @@ public class WaterTest {
         // Then coffee should not be served
         actionwords.coffeeShouldNotBeServed();
     }
-
+    //
+    // Tags: priority:high
     @Test
-    public void whenTheWaterTankIsFilledTheMessageDisappears() {
-        // Given I take "55" coffees
-        actionwords.iTakeCoffeeNumberCoffees(55);
-        // When I fill the water tank
-        actionwords.iFillTheWaterTank();
-        // Then message "Ready" should be displayed
-        actionwords.messageMessageShouldBeDisplayed("Ready");
+    public void messageFillWaterTankIsDisplayedAfter50CoffeesAreTaken() {
+        // When I take "50" coffees
+        actionwords.iTakeCoffeeNumberCoffees(50);
+        // Then message "Fill tank" should be displayed
+        actionwords.messageMessageShouldBeDisplayed("Fill tank");
     }
 }

@@ -3,7 +3,7 @@ package com.testng.coffeemachine;
 import org.testng.annotations.*;
 
 public class ServeCoffeeTest {
-
+    // Tags: sprint:1
     public Actionwords actionwords;
 
     @BeforeMethod
@@ -11,6 +11,7 @@ public class ServeCoffeeTest {
         actionwords = new Actionwords();
     }
     // Well, sometimes, you just get a coffee.
+    // Tags: priority:high
     @Test
     public void simpleUse() {
         // Given the coffee machine is started
